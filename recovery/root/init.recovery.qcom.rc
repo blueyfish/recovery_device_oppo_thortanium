@@ -5,10 +5,7 @@ on fs
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
 on init
-    write /proc/touchpanel/double_tap_enable 1
     write /sys/class/power_supply/usb/otg_switch 1
-
-    setprop ro.board.platform msm8937
 
     exec u:r:recovery:s0 -- /system/bin/merge-fstab.sh
 
