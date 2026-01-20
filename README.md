@@ -7,3 +7,4 @@ Supported devices | Platform
 -----------------:|:-----------------
 OPPO A57 (2016)   | msm8937
 OPPO R9s/k        | msm8953
+OPPO R9s Plus     | msm8976
