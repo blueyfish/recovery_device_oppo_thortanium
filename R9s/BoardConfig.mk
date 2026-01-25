@@ -16,6 +16,8 @@
 
 -include device/oppo/thortanium/BoardConfig.mk
 
+DEVICE_PATH := $(PLATFORM_PATH)/R9s
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := r9s,R9s,r9sk,R9sk,CPH1607
 
@@ -31,6 +33,9 @@ TARGET_KERNEL_CONFIG := lineageos_R9s_recovery_defconfig
 
 # Partitions
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 58765827072 # (58765843456-16384)
+
+# Recovery
+TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
 
 # TWRP Configuration
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone6/temp"

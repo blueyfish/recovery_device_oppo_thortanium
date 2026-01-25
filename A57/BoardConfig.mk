@@ -16,6 +16,8 @@
 
 -include device/oppo/thortanium/BoardConfig.mk
 
+DEVICE_PATH := $(PLATFORM_PATH)/A57
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := A57,CPH1701
 
@@ -31,6 +33,9 @@ TARGET_KERNEL_CONFIG := lineageos_A57_recovery_defconfig
 
 # Partitions
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 27497291264 # (27497307648-16384)
+
+# Recovery
+TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
 
 # TWRP Configuration
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone14/temp"
