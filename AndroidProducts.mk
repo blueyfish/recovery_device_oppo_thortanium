@@ -18,6 +18,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/A57/twrp_A57.mk \
     $(LOCAL_DIR)/R9s/twrp_R9s.mk \
     $(LOCAL_DIR)/R9sPlus/twrp_R9sPlus.mk \
+    $(LOCAL_DIR)/R9Plus/twrp_R9Plus.mk
 
 COMMON_LUNCH_CHOICES := \
     twrp_A57-user \
@@ -28,4 +29,7 @@ COMMON_LUNCH_CHOICES := \
     twrp_R9s-eng \
     twrp_R9sPlus-user \
     twrp_R9sPlus-userdebug \
-    twrp_R9sPlus-eng
+    twrp_R9sPlus-eng \
+    twrp_R9Plus-user \
+    twrp_R9Plus-userdebug \
+    twrp_R9Plus-eng

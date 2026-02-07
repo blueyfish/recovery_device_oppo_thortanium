@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter A57 R9s R9sPlus, $(TARGET_DEVICE)),)
+ifneq ($(filter A57 R9s R9sPlus R9Plus, $(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
