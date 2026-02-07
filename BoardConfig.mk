@@ -56,7 +56,7 @@ TARGET_KERNEL_SOURCE := kernel/oppo/msm8937
 # Verity
 TARGET_NEEDS_OPPO_VERITY_FAKESIGN ?= true
 ifeq ($(TARGET_NEEDS_OPPO_VERITY_FAKESIGN), true)
-BOARD_CUSTOM_BOOTIMG_MK := $(PLATFORM_PATH)/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(PLATFORM_PATH)/boot/mkbootimg.mk
 endif
 
 # TWRP - Crypto
