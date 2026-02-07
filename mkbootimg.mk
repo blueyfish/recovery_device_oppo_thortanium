@@ -15,5 +15,5 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(BOOTIM
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(recovery_ramdisk) $(recovery_kernel)
 	@echo ----- Making recovery image ------
 	$(call build-recoveryimage-target, $@)
-	$(hide) cat $(LOCAL_PATH)/prebuilt/patch >> $@
+	$(hide) cat $(LOCAL_PATH)/boot/patch >> $@
 	$(hide) $(call assert-max-image-size,$@,$(call get-hash-image-max-size,$(BOARD_RECOVERYIMAGE_PARTITION_SIZE)))
