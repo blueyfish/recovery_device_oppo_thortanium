@@ -39,6 +39,3 @@ PRODUCT_MANUFACTURER := OPPO
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="R9Plus" \
     PRODUCT_NAME="R9Plus"
-
-# Set-up dm-verity configs
-$(call inherit-product, $(SRC_TARGET_DIR)/product/verity.mk)

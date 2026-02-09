@@ -14,8 +14,10 @@
 # limitations under the License.
 #
 
+ifeq ($(TARGET_DEVICE), R9PlusL)
 # Verity
 TARGET_NEEDS_OPPO_VERITY_FAKESIGN := false
+endif
 
 -include device/oppo/thortanium/BoardConfig.mk
 
@@ -32,10 +34,12 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno510
 TARGET_BOOTLOADER_BOARD_NAME := MSM8952
 
 # Kernel
+ifeq ($(TARGET_DEVICE), R9PlusL)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbToolOppo
 BOARD_DTBTOOL_ARGS := --force-v3
+endif
 TARGET_KERNEL_CONFIG := lineageos_R9Plus_recovery_defconfig
 
 # Partitions
